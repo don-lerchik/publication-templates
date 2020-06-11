@@ -1,0 +1,150 @@
+extends ../templates/template.pug
+block head
+  +head('БЦ Черная Речка')
+block content
+  - 
+    var contentHeader= {
+      contentPage: [
+        {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Офисы',
+          href: '/office-list.html',
+          active: true,
+        },
+        {
+          text: 'Контакты',
+          href: '',
+        },
+        {
+          text: 'Заказать звонок',
+          href: '',
+        }
+      ],
+      contentContact: {
+        phone: '8 (812) 655-05-82',
+        textBig: 'АРЕНДА',
+        textSmall: 'от 690 р/м²',
+      },
+      contentLogo: {
+        img: './img/ЧЕРНАЯ РЕЧКА.png',
+        text: 'Бизнес-центр, г. Санкт-Петербург, ул. Белоостровская, 22',
+      }
+    };
+    var contentAboutOffice= {
+      img: './img/aboutImage2.jpg',
+      title: 'Аренда офиса в СПб недорого',
+      text: [
+        'Здание бизнес-центра было построено в 30-е годы 20-го века для завода “Водтрансприбор”. Завод “Водтрансприбор” был первым в России заводом по выпуску гидроакустической аппаратуры. Фасад здание и сейчас сохранил элементы архитектуры авангарда.',
+        'Фасад здание и сейчас сохранил элементы архитектуры авангарда. Интерьер бизнес-центр отвечает всем современным требованиям комфортного рабочего пространства. В бизнес-центре преобладают офисы и офисные блоки до 100 квадратных метра.',
+        'Удобное транспортное сообщение, как для пешеходов, так и для автомобилистов. Неподалеку от бизнес-центра находится остановка общественного транспорта, а всего в 12 минутах ходьбы - станция метро “Чёрная Речка“.',
+      ],
+    };
+    var contentOfficeList= [
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        salePrice: '20 560',
+        img: './img/office1.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        salePrice: '20 560',
+        img: './img/office1.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        salePrice: '20 560',
+        img: './img/office1.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        img: './img/office2.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        img: './img/office2.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        img: './img/office2.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        img: './img/office2.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        img: './img/office2.jpg',
+      },
+      {
+        name: '018543',
+        square: '19',
+        flor: '2',
+        class: 'B',
+        price: '22 560',
+        img: './img/office2.jpg',
+      },
+    ];
+    var contentFeedback = {
+      img: './img/bannerFeedback2.jpg',
+    };
+    var contentFooter= {
+      contentPage: [
+         {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Офисы',
+          href: '/office-list.html',
+          active: true,
+        },
+        {
+          text: 'Контакты',
+          href: '',
+        },
+        {
+          text: 'Заказать звонок',
+          href: '',
+        }
+      ],
+    }
+  +header(contentHeader)
+  +officeList(contentOfficeList)
+  +aboutOffice(contentAboutOffice)
+  +feedback(contentFeedback)
+  +footer(contentFooter)

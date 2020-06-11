@@ -1,25 +1,28 @@
-
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../Ptrootuimedium.woff2') format('woff2'), url('../Ptrootuimedium.woff') format('woff'), url('../Ptrootuimedium.ttf') format('truetype');
+  font-family: "PT Root UI";
+  src: url("../fonts/Ptrootuimedium.woff2") format("woff2"), url("../fonts/Ptrootuimedium.woff") format("woff"),
+    url("../fonts/Ptrootuimedium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../Ptrootuilight.woff2') format('woff2'), url('../Ptrootuilight.woff') format('woff'), url('../Ptrootuilight.ttf') format('truetype');
+  font-family: "PT Root UI";
+  src: url("../fonts/Ptrootuilight.woff2") format("woff2"), url("../fonts/Ptrootuilight.woff") format("woff"),
+    url("../fonts/Ptrootuilight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../Ptrootui.woff2') format('woff2'), url('../Ptrootui.woff') format('woff'), url('../Ptrootui.ttf') format('truetype');
+  font-family: "PT Root UI";
+  src: url("../fonts/Ptrootui.woff2") format("woff2"), url("../fonts/Ptrootui.woff") format("woff"),
+    url("../fonts/Ptrootui.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PT Root UI';
-  src: url('../Ptrootuibold.woff2') format('woff2'), url('../Ptrootuibold.woff') format('woff'), url('../Ptrootuibold.ttf') format('truetype');
+  font-family: "PT Root UI";
+  src: url("../fonts/Ptrootuibold.woff2") format("woff2"), url("../fonts/Ptrootuibold.woff") format("woff"),
+    url("../fonts/Ptrootuibold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }

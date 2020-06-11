@@ -6,17 +6,8 @@ mixin generalInfo(modifier)
     .container.generalInfo__container
       .generalInfo__blockRight
         each val in table
-          .generalInfo__tableWrap
-            h3.generalInfo__tableTitle= val.title
-            table.generalInfo__table
-              each val2 in val.elem
-                tr.generalInfo__row
-                  td.generalInfo__cell.generalInfo__cell--left= val2.name
-                  td.generalInfo__cell.generalInfo__cell--right= val2.count
+          +pbt-table(val)
       .generalInfo__blockLeft
         each val in list
-          .generalInfo__listWrap
-            h3.generalInfo__listTitle= val.title
-            ul.generalInfo__list
-              each val2 in val.elem
-                li.generalInfo__listItem= val2
+          +pbt-list(val)(class='generalInfo__listWrap')
+           

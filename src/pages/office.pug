@@ -1,0 +1,130 @@
+extends ../templates/template.pug
+block head
+  +head('БЦ Черная Речка')
+block content
+  - 
+    var contentHeader= {
+      contentPage: [
+        {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Офисы',
+          href: '/office-list.html',
+          active: true,
+        },
+        {
+          text: 'Контакты',
+          href: '',
+        },
+        {
+          text: 'Заказать звонок',
+          href: '',
+        }
+      ],
+      contentContact: {
+        phone: '8 (812) 655-05-82',
+        textBig: 'АРЕНДА',
+        textSmall: 'от 690 р/м²',
+      },
+      contentLogo: {
+        img: './img/ЧЕРНАЯ РЕЧКА.png',
+        text: 'Бизнес-центр, г. Санкт-Петербург, ул. Белоостровская, 22',
+      }
+    };
+    var contentOffice= {
+      metro: 'Лесная',
+      square: '269.7',
+      rate: '750',
+      price: '202 275',
+      image: {
+        main: '',
+        list: [
+          '',
+          '',
+        ]
+      },
+      table: {
+        title: 'Общее',
+        elem: [
+          {
+            name: 'Тип объекта',
+            count: 'Офис',
+          },
+          {
+            name: 'Площадь',
+            count: '20 962,9 м²',
+          },
+          {
+            name: 'Код',
+            count: 'Урал',
+          },
+        ],
+      },
+      list: {
+        title: '',
+        elem: [
+            'НДС',
+            'Коммунальные услуги',
+          ]
+      },
+      listImg: {
+        title: '',
+        elem: [
+          {
+            name: 'Паркинг',
+            icon: './img/parking.png',
+          },
+          {
+            name: 'Доступ на объект',
+            icon: './img/access.png',
+          },
+          {
+            name: 'Круглосуточная охрана',
+            icon: './img/security.png',
+          },
+          {
+            name: 'Кафе',
+            icon: './img/cafe.png',
+          },
+        ],
+      },
+    };
+    var contentDescription= {
+      title: '',
+      text: [
+        'В 15 минутах от станции метро "Чёрная речка" в аренду сдаются светлые офисные помещения площадью 269,7 кв. м. Качественная отделка: подвесной потолок, напольное покрытие линолеум, светлые окрашенные обои. ',
+        'Оснащение: цифровая телефония, высокоскоростной интернет, пожарная сигнализация. В БЦ "Чёрная речка" есть всё для комфортного ведения бизнеса: объект находится под круглосуточной охраной, на территории имеются столовая и магазин, здание оборудовано системой видеонаблюдения.',
+      ],
+      plan: './img/plan.png',
+    };
+    var contentFeedback = {
+      img: './img/bannerFeedback2.jpg',
+    };
+    var contentFooter= {
+      contentPage: [
+         {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Офисы',
+          href: '/office-list.html',
+          active: true,
+        },
+        {
+          text: 'Контакты',
+          href: '',
+        },
+        {
+          text: 'Заказать звонок',
+          href: '',
+        }
+      ],
+    }
+  +header(contentHeader)
+  +officePage(contentOffice)
+  +description(contentDescription)
+  +feedback(contentFeedback)
+  +footer(contentFooter)

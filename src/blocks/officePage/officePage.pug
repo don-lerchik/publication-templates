@@ -1,0 +1,47 @@
+mixin officePage(modifier)
+  -var content = modifier || {}
+  -var metro = content.metro || ''
+  -var square = content.square || ''
+  -var rate = content.rate || ''
+  -var price = content.price || ''
+  -var image = content.image || ''
+  -var imageMain = image.main || ''
+  -var imageList = image.list || ''
+  -var table = content.table || ''
+  -var list = content.list || ''
+  -var listImg = content.listImg || ''
+  section.officePage&attributes(attributes)
+    .container.officePage__container
+      .officePage__header
+        h2.officePage__title
+          | Офис у метро
+          span Лесная |
+          | Площадь
+          span 269.7
+          | м²
+          br
+          | по ставке
+          span 750
+          | руб *
+        .officePage__request
+          input(type="date").officePage__dataPicker
+          button(type='button').btn.officePage__btn Оставить заявку на просмотр
+      .officePage__body
+        .officePage__imageBlock
+          .officePage__imageMain
+            .officePage__priceBlock
+              span.officePage__price
+                span р/месяц
+          .officePage__imageList
+            each val in imageList
+              .officePage__imageItem
+        .officePage__contentBlock
+          .officePage__tableWrap
+            each val in table
+              +pbt-table(val)
+          .officePage__listIconWrap
+            each val in listImg
+              +pbt-listIcon(val)
+          .officePage__list
+            each val in list
+              +pbt-list(val)

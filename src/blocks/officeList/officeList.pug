@@ -1,0 +1,7 @@
+mixin officeList(modifier)
+  -var content = modifier || ''
+  section.officeList&attributes(attributes)
+    .container.officeList__container
+      .officeList__list
+        each val in content
+          +officeBlock(val)(class='officeList__item officeList__item--type1')

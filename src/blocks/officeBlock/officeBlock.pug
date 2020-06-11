@@ -1,0 +1,30 @@
+mixin officeBlock(modifier)
+  -var content = modifier || {}
+  -var name = content.name || ''
+  -var square = content.square || ''
+  -var flor = content.flor || ''
+  -var classType = content.class || ''
+  -var price = content.price || ''
+  -var salePrice = content.salePrice || ''
+  -var img = content.img || ''
+  a.officeBlock&attributes(attributes)(class= salePrice ? 'officeBlock--sale' : '' href='./office.html')
+    .officeBlock__image(style='background-image: url("'+img + ' ") ')
+    .officeBlock__content
+      .officeBlock__body
+        .officeBlock__title Офис
+          span= name
+        .officeBlock__data
+          .officeBlock__dataItem
+            | Площадь
+            span 19
+            | м²
+          .officeBlock__dataItem Этаж
+            span 2
+          .officeBlock__dataItem Класс
+            span B
+      .officeBlock__footer
+        .officeBlock__price Ставка, ₽
+          span= price
+        -if (salePrice) {
+          span.officeBlock__priceSale= salePrice
+        -}

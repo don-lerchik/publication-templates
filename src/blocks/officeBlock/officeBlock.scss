@@ -1,0 +1,86 @@
+.officeBlock {
+  display: flex;
+  cursor: pointer;
+  &--sale {
+    .officeBlock__content{
+      position: relative;
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: 14px;
+        right: 16px;
+        background-image: url(../img/Star.png);
+      }
+    }
+    .officeBlock__footer {
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 76px;
+        background:linear-gradient(135deg, rgba(0, 0, 0, 0) 50%, #e41f1f 50%);
+      }
+    }
+    .officeBlock__price span{
+      text-decoration: line-through;
+    }
+    .officeBlock__priceSale {
+      position: absolute;
+      bottom: 7px;
+      left: 40px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #e41f1f;
+      font-weight: 600;
+    }
+  }
+  &__image {
+    width: 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__content {
+    flex-grow: 1;
+  }
+  &__body {
+    padding: 9px 16px 11px;
+    background-color: $main-color-4;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 600;
+    & span {
+      padding: 0 4px;
+    }
+  }
+  &__data {
+    margin-bottom: 11px;
+  }
+  &__dataItem {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    & span {
+      padding: 0 4px;
+    }
+  }
+  &__footer {
+    padding: 10px 16px 42px;
+    background-color: $main-color-3;
+  }
+  &__price {
+    & span {
+      padding-left: 11px;
+      font-weight: 600;
+    }
+  }
+}
