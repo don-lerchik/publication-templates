@@ -1,0 +1,11 @@
+mixin historyInfo(modifier)
+  -var content = modifier || {}
+  -var text = content || ''
+  -var count = 100/text.length
+  .historyInfo&attributes(attributes)
+    .container.historyInfo__container
+      .historyInfo__content
+        each val in text
+          .historyInfo__block(style='width:'+ count +'%')
+            each val2 in val
+              p.historyInfo__item= val2

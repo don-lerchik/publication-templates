@@ -1,0 +1,14 @@
+mixin aboutOffice(modifier)
+  -var content = modifier || {}
+  -var img = content.img || ''
+  -var title = content.title || ''
+  -var text = content.text || ''
+  -var substrate = content.substrate || ''
+  .aboutOffice&attributes(attributes)(class= substrate ? 'aboutOffice__substrate' : '')
+    .container.aboutOffice__container
+      .aboutOffice__img(style='background-image: url("'+ img + ' ") ')
+      .aboutOffice__content
+        h2.aboutOffice__title= title
+        .aboutOffice__textBlock
+          each val in text
+            p.aboutOffice__text= val

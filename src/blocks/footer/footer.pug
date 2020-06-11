@@ -1,0 +1,10 @@
+mixin footer(modifier)
+  -var content = modifier || {}
+  -var pageLink = content.contentPage || ''
+  .footer&attributes(attributes)
+    .container.footer__container
+      nav.footer__nav
+        ul.footer__listNav
+          each val in pageLink
+           +item-link({href: val.href , text: val.text, visible: 'true', active: val.active})(class="footer__linkNav")
+      .footer__copyright © 2016 - 2020 "БЦ Черная Речка", ул. Белоостровская 22 , все права защищены.

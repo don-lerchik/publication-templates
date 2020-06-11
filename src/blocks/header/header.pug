@@ -1,0 +1,19 @@
+mixin header(modifier)
+  -var content = modifier || {}
+  -var pageLink = content.contentPage || ''
+  -var contact = content.contentContact || ''
+  -var logo = content.contentLogo || ''
+  .header&attributes(attributes)
+    .container.header__container
+      nav.header__nav
+        ul.header__listNav
+          each val in pageLink
+            +item-link({href: val.href , text: val.text, visible: 'true', active: val.active})(class="header__linkNav")
+        a.header__logo(href='./')
+          .header__logoImg(style='background-image: url("'+logo.img + ' ") ')
+          .header__logoText= logo.text
+      .header__contactWrap
+        .header__contactBlock
+          .header__contactPhone= contact.phone
+          .header__contactTitle= contact.textBig
+          .header__contactText= contact.textSmall

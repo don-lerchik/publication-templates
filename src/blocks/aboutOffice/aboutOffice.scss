@@ -1,0 +1,35 @@
+.aboutOffice {
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  &__substrate{
+    background:linear-gradient(162deg, $substrate-color-1 60%,$substrate-color-2 60%);
+    color: #fff;
+  }
+  &__img {
+    flex-basis: 45%;
+    height: 425px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  &__content {
+    flex-basis: 45%;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 23px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+}

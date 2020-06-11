@@ -1,0 +1,162 @@
+extends ../templates/template.pug
+block head
+  +head('БЦ Черная Речка')
+block content
+  - 
+    var contentHeader= {
+      contentPage: [
+        {
+          text: 'Информация',
+          href: '/info.html',
+        },
+        {
+          text: 'Офисы',
+          href: '',
+        },
+        {
+          text: 'Контакты',
+          href: '',
+        },
+        {
+          text: 'Заказать звонок',
+          href: '',
+        }
+      ],
+      contentContact: {
+        phone: '8 (812) 655-05-82',
+        textBig: 'АРЕНДА',
+        textSmall: 'от 690 р/м²',
+      },
+      contentLogo: {
+        img: './img/ЧЕРНАЯ РЕЧКА.png',
+        text: 'Бизнес-центр, г. Санкт-Петербург, ул. Белоостровская, 22',
+      }
+    };
+    var contentBanner = {
+      img: './img/bannerBig.jpg',
+      text: 'Здание бизнес-центра построено в 1933 году в расцвете архитектуры авангарда. Фасад сохранил своё историческое очертание, интерьер же приобрёл современный, практичный и комфортный вид. Бизнес-центр “Чёрная речка” расположен в шаговой доступности от метро “Чёрная Речка”.',
+      advantages: [
+        {
+          title: 'БИЗНЕС-ЛАНЧ',
+          text: 'В среднем 200 руб.',
+          img: './img/advantage_1.png',
+        },
+        {
+          title: 'ОФИС КЛАССА C',
+          text: 'Комфорт и практичность',
+          img: './img/advantage_2.png',
+        },
+        {
+          title: 'ОФИС КЛАССА C',
+          text: 'Комфорт и практичность',
+          img: './img/advantage_2.png',
+        },
+      ],
+      promo: {
+        text: 'Назовите оператору контакт центра при звонке ваш',
+        code: 'промокод: 168',
+      }
+    };
+    var contentMainOfficeList = {
+      included: [
+        'НДС',
+        'Уборка офисов',
+        'коммунальные услуги, включая электроэнергию',
+      ],
+      officeList: [
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+        {
+          title: '018543',
+          square: '19',
+          floor: '2',
+          class: 'B',
+          price: '22 560',
+        },
+      ]
+    };
+    var contentAboutOffice= {
+      img: './img/aboutImg.jpg',
+      title: 'Аренда офисных помещений',
+      text: [
+        'Бизнес-центр “Чёрная речка” располагается на Выборгской стороне в Санкт-Петербурге. Белоостровская улица, на которой находится здание, проходит вблизи Кантемировского моста, и в пешей доступности от станций метро “Чёрная Речка” и “Лесная”.',
+        'У бизнес-центра развитая инфраструктура: кафе, рестораны, заправочная станция, продуктовые магазины. Удобное транспортное сообщение, как для пешеходов, так и для автомобилистов. Неподалеку от бизнес-центра находится остановка общественного транспорта, а всего в 12 минутах ходьбы - станция метро “Чёрная Речка“.',
+        'Для комфортных условий развития бизнеса в здании есть высокоскоростной доступ в интернет, качественная отделка, кафе и магазин для сотрудников.',
+      ]
+    };
+    var contentFeedback = {
+      img: './img/bannerFeedback.jpg',
+    };
+    var contentFooter= {
+      contentPage: [
+        {
+          text: 'Информация',
+          href: '',
+        },
+        {
+          text: 'Офисы',
+          href: '',
+        },
+        {
+          text: 'Контакты',
+          href: '',
+        },
+        {
+          text: 'Заказать звонок',
+          href: '',
+        }
+      ],
+    }
+  +header(contentHeader)
+  +banner(contentBanner)
+  +mainOfficeList(contentMainOfficeList)
+  +aboutOffice(contentAboutOffice)
+  +feedback(contentFeedback)
+  +footer(contentFooter)

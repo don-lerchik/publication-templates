@@ -1,0 +1,60 @@
+.feedback {
+  &__banner {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+  &__container {
+    padding-top: 23px;
+    padding-bottom: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__seo {
+    background-color: rgba(246, 248, 251, 0.65);
+  }
+  &__blockText {
+    margin-right: 55px;
+  }
+  &__textTitle {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+  &__form {
+    padding: 37px 75px 30px;
+    background-color: $main-color-1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__formTitle {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  &__formName {
+    width: 304px;
+    margin-bottom: 14px;
+  }
+  &__formPhone {
+    width: 304px;
+    margin-bottom: 25px;
+  }
+  &__checkbox {
+    margin-bottom: 20px;
+  }
+  &__link {
+  }
+  &__btn {
+    background-color: #d0ddfb;
+    width: 148px;
+    color: $main-color-1;
+  }
+}

@@ -1,0 +1,31 @@
+mixin mainOfficeList(modifier)
+  -var content = modifier || {}
+  -var included = content.included || ''
+  -var officeList = content.officeList || ''
+  .mainOfficeList&attributes(attributes)
+    .container.mainOfficeList__container
+      .mainOfficeList__blockRight
+        h2.mainOfficeList__title В арендную ставку включено
+        ul.mainOfficeList__includesList
+          each val in included
+            li.mainOfficeList__includesItem= val
+      .mainOfficeList__blockLeft
+        ul.mainOfficeList__officeList
+          each val in officeList
+            li.mainOfficeList__officeItem
+              .mainOfficeList__officeBody
+                span.mainOfficeList__officeNumber Офис
+                  span= val.title
+                span.mainOfficeList__officeSuare
+                  | Площадь
+                  span=  val.square
+                  | м²
+                span.mainOfficeList__officeFloor Этаж 
+                  span=  val.floor
+                span.mainOfficeList__officeClass Класс 
+                  span=  val.class
+              .mainOfficeList__officeFooter
+                span.mainOfficeList__officePrice Ставка, ₽ 
+                  span=  val.price
+        a.btn.mainOfficeList__btn Посмотреть все
+              

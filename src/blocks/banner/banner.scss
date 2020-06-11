@@ -1,0 +1,115 @@
+.banner {
+  &__image {
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  &__container {
+    position: relative;
+    margin-top: 35px;
+    padding-top: 120px;
+    padding-bottom: 190px;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 52px;
+  }
+  &__contentLeft {
+    flex-basis: 470px;
+    margin-right: 100px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 18px;
+  }
+  &__text {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__promoBlock {
+    width: 270px;
+  }
+  &__promoText {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__promoTitle {
+    margin: 0;
+    margin-bottom: 23px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__btn {
+    width: 147px;
+  }
+  &__contentRight {
+    flex-grow: 1;
+  }
+  &__advantageBlock {
+  }
+  &__advantageList {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__advantageItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 16px;
+  }
+  &__advantageIcon {
+    width: 77px;
+    height: 77px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 12px;
+  }
+  &__advantageTitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  &__advantageText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  &__linkBlock {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    padding: 12px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    width: 473px;
+    &--left {
+      border-right: 1px solid $main-color-5;
+      border-radius: $border-radius 0 0 $border-radius;
+    }
+    &--right {
+      border-left: 1px solid $main-color-5;
+      border-radius: 0 $border-radius $border-radius 0;
+    }
+  }
+}

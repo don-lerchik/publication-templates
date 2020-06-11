@@ -1,0 +1,16 @@
+@import 'mixins';
+
+/* Global styles */
+@import 'global/global-variables';
+@import 'global/global-fonts';
+@import 'global/global-typo';
+@import 'global/global-scaffolding';
+
+@import './src/blocks/header/header';
+@import './src/blocks/banner/banner';
+@import './src/blocks/mainOfficeList/mainOfficeList';
+@import './src/blocks/aboutOffice/aboutOffice';
+@import './src/blocks/feedback/feedback';
+@import './src/blocks/footer/footer';
+@import './src/blocks/generalInfo/generalInfo';
+@import './src/blocks/historyInfo/historyInfo';

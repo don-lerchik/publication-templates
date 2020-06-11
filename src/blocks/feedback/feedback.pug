@@ -1,0 +1,21 @@
+mixin feedback(modifier)
+  -var content = modifier || {}
+  -var img = content.img || ''
+  -var seo = content.text || ''
+  .feedback&attributes(attributes)
+    .feedback__banner(style='background-image: url("'+ img + ' ") ')
+      .container.feedback__container(class= seo ? 'feedback__seo' : '')
+        -if (seo) {
+          .feedback__blockText
+            h2.feedback__textTitle= seo.title
+            p.feedback__text= seo.text
+        -} 
+        form.feedback__form(action="#" method="get")
+          h3.feedback__formTitle Хотите узнать подробнее
+          input.feedback__formName(id='name' name= 'name' type= 'text' placeholder="Имя" autocomplete="on" required)
+          input.feedback__formPhone(id='phone' name= 'phone' type= 'tel' placeholder="Телефон" autocomplete="on" required)
+          +checkbox({ name: 'processing', id : 'checkbox_processing', title : 'Я согласен на обработку моих пресональных данных', check: true})(class = 'feedback__checkbox' checked)
+            span.feedback__span в соответствии с
+            br
+            +link({ text: 'Пользовательским соглашением' , href: '#'})(class = 'feedback__link')
+          button.btn.feedback__btn(type = 'submit') Отправить
