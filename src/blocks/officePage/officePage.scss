@@ -71,6 +71,9 @@
     width: 173px;
     height: 100%;
     margin-right: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     &:last-of-type{
       margin-right: 0;
     }
