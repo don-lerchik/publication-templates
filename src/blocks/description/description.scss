@@ -1,3 +1,48 @@
 .description {
-  
+  background-color: $main-color-1;
+  color: $main-color-5;
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 48px;
+    display: flex;
+  }
+  &__content {
+    width: 60%;
+    margin-right: 40px;
+    flex-grow: 1;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  &__plan {
+    width: 405px;
+    height: 272px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  &__loop{
+    position: absolute;
+    cursor: pointer;
+    top: 14px;
+    right: 14px;
+    width: 24px;
+    height: 26px;
+    background: url('../img/search.png') 50% 50% no-repeat;
+  }
+  &__textBlock {
+  }
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
 }

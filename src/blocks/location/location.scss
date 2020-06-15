@@ -1,0 +1,50 @@
+.location {
+  &__container {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    display: flex;
+  }
+  &__map {
+    width: 700px;
+    height: 226px;
+    margin-right: 48px;
+    border: 1px solid red;
+  }
+  &__content {
+    padding-top: 20px;
+  }
+  &__place {
+    margin-bottom: 16px;
+  }
+  &__metroItem {
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  &__subwayIcon{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  &__subwayName{
+    white-space: nowrap;
+    margin-right: 8px;
+  }
+  &__typeTime{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    &--car{
+      background-image: url('../img/drive-time.png');
+    }
+    &--foot{
+      background-image: url('../img/footsteps.png');
+    }
+  }
+}

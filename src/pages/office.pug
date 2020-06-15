@@ -39,65 +39,104 @@ block content
       rate: '750',
       price: '202 275',
       image: {
-        main: '',
+        main: './img/officeImg_main.jpg',
         list: [
-          '',
-          '',
+          './img/officeImg_subMain.jpg',
+          './img/officeImg_subMain.jpg',
         ]
       },
-      table: {
-        title: 'Общее',
-        elem: [
-          {
-            name: 'Тип объекта',
-            count: 'Офис',
-          },
-          {
-            name: 'Площадь',
-            count: '20 962,9 м²',
-          },
-          {
-            name: 'Код',
-            count: 'Урал',
-          },
-        ],
-      },
-      list: {
-        title: '',
-        elem: [
-            'НДС',
-            'Коммунальные услуги',
-          ]
-      },
-      listImg: {
-        title: '',
-        elem: [
-          {
-            name: 'Паркинг',
-            icon: './img/parking.png',
-          },
-          {
-            name: 'Доступ на объект',
-            icon: './img/access.png',
-          },
-          {
-            name: 'Круглосуточная охрана',
-            icon: './img/security.png',
-          },
-          {
-            name: 'Кафе',
-            icon: './img/cafe.png',
-          },
-        ],
-      },
+      table: [
+        {
+          title: 'Общее',
+          elem: [
+            {
+              name: 'Тип объекта',
+              count: 'Офис',
+            },
+            {
+              name: 'Площадь',
+              count: '20 962,9 м²',
+            },
+            {
+              name: 'Код',
+              count: 'Урал',
+            },
+          ],
+        },
+      ],
+      list: [
+        {
+          title: 'Включено в аренду',
+          elem: [
+              'НДС',
+              'Коммунальные услуги',
+            ]
+        },
+      ],
+      listImg: [
+        {
+          title: 'Дополнительно',
+          elem: [
+            {
+              name: 'Паркинг',
+              icon: './img/parking.png',
+            },
+            {
+              name: 'Доступ на объект',
+              icon: './img/access.png',
+            },
+            {
+              name: 'Круглосуточная охрана',
+              icon: './img/security.png',
+            },
+            {
+              name: 'Кафе',
+              icon: './img/cafe.png',
+            },
+          ],
+        },
+      ],
     };
     var contentDescription= {
-      title: '',
+      title: 'Описание',
       text: [
         'В 15 минутах от станции метро "Чёрная речка" в аренду сдаются светлые офисные помещения площадью 269,7 кв. м. Качественная отделка: подвесной потолок, напольное покрытие линолеум, светлые окрашенные обои. ',
         'Оснащение: цифровая телефония, высокоскоростной интернет, пожарная сигнализация. В БЦ "Чёрная речка" есть всё для комфортного ведения бизнеса: объект находится под круглосуточной охраной, на территории имеются столовая и магазин, здание оборудовано системой видеонаблюдения.',
       ],
       plan: './img/plan.png',
+    };
+    var contentLocation= {
+      address: {
+        title: 'Расположение',
+        elem : [
+          {
+            name: 'Город',
+            count: 'Санкт Петербург',
+          },
+          {
+            name: 'Адрес',
+            count: 'ул. Комсомола д. 1-3',
+          },
+          {
+            name: 'Район',
+            count: 'Калининский',
+          },
+        ],
+      },
+      metro: [
+        {
+          name: 'Площадь Александра Невского II',
+          color: './img/metro_orange.png',
+          type: '1',
+          time: '10 мин.',
+        },
+        {
+          name: 'Чернышевская',
+          color: './img/metro_red.png',
+          type: '2',
+          time: '15 мин.',
+        }
+      ]
     };
     var contentFeedback = {
       img: './img/bannerFeedback2.jpg',
@@ -126,5 +165,6 @@ block content
   +header(contentHeader)
   +officePage(contentOffice)
   +description(contentDescription)
+  +location(contentLocation)
   +feedback(contentFeedback)
   +footer(contentFooter)

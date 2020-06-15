@@ -1,3 +1,83 @@
 .officePage {
-  
+  background-color: $main-color-5;
+  &__container {
+    padding-top: 36px;
+    padding-bottom: 64px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    & span{
+      padding: 0 5px;
+    }
+  }
+  &__request{
+    display: flex;
+    align-items: center;
+  }
+  &__dataPicker{
+    width: 170px;
+    margin-right: 16px;
+  }
+  &__btn{
+    width: 214px;
+  }
+  &__body{
+    display: flex;
+  }
+  &__imageBlock{
+    width: 366px;
+    margin-right: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__imageMain{
+    width: 100%;
+    height: 324px;
+    margin-bottom: 16px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+  }
+  &__priceBlock{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 190px;
+    background-color: $main-color-1;
+    padding: 0 17px;
+  }
+  &__price{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $main-color-5;
+  }
+  &__imageList{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 116px;
+  }
+  &__imageItem{
+    width: 173px;
+    height: 100%;
+    margin-right: 20px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  &__contentBlock{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

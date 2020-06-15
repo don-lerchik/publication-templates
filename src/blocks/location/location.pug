@@ -1,0 +1,21 @@
+mixin location(modifier)
+  -var content = modifier || {}
+  -var address = content.address || ''
+  -var metro = content.metro || ''
+  section.location&attributes(attributes)
+    .container.location__container
+      .location__map 
+      .location__content
+        +pbt-table(address)(class= 'location__place')
+        ul.location__metroList
+          each val in metro
+            li.location__metroItem
+              span.location__subwayIcon(style='background-image: url("'+ val.color + ' ") ')
+              span.location__subwayName= val.name
+              - if (val.type === '1') {
+                span.location__typeTime.location__typeTime--car
+              -}
+              - else {
+                span.location__typeTime.location__typeTime--foot
+              -}
+              span.location__time= val.time

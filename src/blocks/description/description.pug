@@ -1,2 +1,14 @@
 mixin description(modifier)
-  .description&attributes(attributes)
+  -var content = modifier || {}
+  -var title = content.title || ''
+  -var text = content.text || ''
+  -var plan = content.plan || ''
+  section.description&attributes(attributes)
+    .container.description__container
+      .description__content
+        h2.description__title= title
+        .description__textBlock
+          each val in text
+            p.description__text= val
+      .description__plan(style='background-image: url("'+ plan + ' ") ')
+        .description__loop

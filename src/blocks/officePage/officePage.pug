@@ -28,13 +28,14 @@ mixin officePage(modifier)
           button(type='button').btn.officePage__btn Оставить заявку на просмотр
       .officePage__body
         .officePage__imageBlock
-          .officePage__imageMain
+          .officePage__imageMain(style='background-image: url("'+ imageMain + ' ") ')
             .officePage__priceBlock
-              span.officePage__price
+              span.officePage__price= price
+                br 
                 span р/месяц
           .officePage__imageList
             each val in imageList
-              .officePage__imageItem
+              .officePage__imageItem(style='background-image: url("'+ val + ' ") ')
         .officePage__contentBlock
           .officePage__tableWrap
             each val in table
