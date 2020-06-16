@@ -2,6 +2,7 @@ mixin feedback(modifier)
   -var content = modifier || {}
   -var img = content.img || ''
   -var seo = content.text || ''
+  -var hidden = content.hidden || ''
   .feedback&attributes(attributes)
     .feedback__banner(style='background-image: url("'+ img + ' ") ')
       .container.feedback__container(class= seo ? 'feedback__seo' : '')
@@ -14,8 +15,11 @@ mixin feedback(modifier)
           h3.feedback__formTitle Хотите узнать подробнее
           input.feedback__formName(id='name' name= 'name' type= 'text' placeholder="Имя" autocomplete="on" required)
           input.feedback__formPhone(id='phone' name= 'phone' type= 'tel' placeholder="Телефон" autocomplete="on" required)
+          -if (hidden) {
+            input.feedback__formElement.visually-hidden(id='element' name= 'element' type= 'number')
+          -} 
           +checkbox({ name: 'processing', id : 'checkbox_processing', title : 'Я согласен на обработку моих пресональных данных', check: true})(class = 'feedback__checkbox' checked)
             span.feedback__span в соответствии с
             br
             +link({ text: 'Пользовательским соглашением' , href: '#'})(class = 'feedback__link')
-          button.btn.feedback__btn(type = 'submit') Отправить
+          button.btn.feedback__btn(type = 'submit' name='feedback') Отправить
